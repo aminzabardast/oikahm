@@ -1,12 +1,12 @@
-import OIKAHM, { type OIKAHMKey } from "./index";
+import OIKAHM, { type OIKAHMKey } from "../src/index";
+
+let hashMap: InstanceType<typeof OIKAHM>;
+
+beforeEach(() => {
+  hashMap = new OIKAHM();
+});
 
 describe("Generally, OIKAHM", () => {
-  let hashMap: InstanceType<typeof OIKAHM>;
-
-  beforeEach(() => {
-    hashMap = new OIKAHM();
-  });
-
   it("should return `undefined` for any key by default.", () => {
     const key: OIKAHMKey = "testKey";
     expect(hashMap.get(key)).toBeUndefined();
@@ -36,6 +36,6 @@ describe("OIKAHM with `array` key", () => {
 describe("OIKAHM with `object` key", () => {
   it.todo("should be Order-Invariant.");
 });
-describe("OIKAHM with `array` and - a similar - `object` keys", () => {
-  it.todo("should be Order-Invariant ,and Key-Agnostic, and not mix up both.");
+describe("OIKAHM with both `array` and - a similar - `object` keys", () => {
+  it.todo("should be Order-Invariant and Key-Agnostic (and not mix them up).");
 });
