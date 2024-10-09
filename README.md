@@ -7,7 +7,7 @@ OIKAHM is a JavaScript implementation of a flexible and efficient hash map that 
 ## Features
 
 - Order Invariance: Keys can be passed in any order, and OIKAHM will treat them as equivalent.
-- Key Agnosticism: Supports various key structures, including arrays (['a', 'b', 'c']) and objects ({a: 'AA', b: 'BB', c: 'CC'}).
+- Key Agnosticism: Supports various key structures, including arrays (`['a', 'b', 'c']`) and objects (`{a: 'AA', b: 'BB', c: 'CC'}`).
 - Efficient Lookup: Provides fast access, insertion, and deletion operations for composite keys.
 - Customizable Hashing: Uses a default hashing mechanism but can be extended with custom hash functions to fit specific use cases.
 
