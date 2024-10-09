@@ -11,6 +11,30 @@ OIKAHM is a JavaScript implementation of a flexible and efficient hash map that 
 - Efficient Lookup: Provides fast access, insertion, and deletion operations for composite keys.
 - Customizable Hashing: Uses a default hashing mechanism but can be extended with custom hash functions to fit specific use cases.
 
+## Installation
+
+To install OIKAHM, clone the repository:
+
+```shell
+git clone https://github.com/your-username/OIKAHM.git
+```
+
+```js
+const oikahm = new OIKAHM();
+
+// Using an array as a key
+oikahm.set(["a", "b", "c"], "value1");
+console.log(oikahm.get(["c", "b", "a"])); // Outputs: 'value1'
+
+// Using an object as a key
+oikahm.set({ x: 1, y: 2 }, "value2");
+console.log(oikahm.get({ y: 2, x: 1 })); // Outputs: 'value2'
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request with improvements, bug fixes, or new features.
+
 ## License
 
 This project is licensed under the MIT License.
