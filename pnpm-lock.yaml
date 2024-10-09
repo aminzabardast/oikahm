@@ -7,10 +7,23 @@ settings:
 importers:
 
   .:
+    dependencies:
+      murmurhash-js:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
+      '@rollup/plugin-commonjs':
+        specifier: ^28.0.0
+        version: 28.0.0(rollup@4.24.0)
+      '@rollup/plugin-node-resolve':
+        specifier: ^15.3.0
+        version: 15.3.0(rollup@4.24.0)
       '@rollup/plugin-typescript':
-        specifier: ^12
+        specifier: ^12.1.0
         version: 12.1.0(rollup@4.24.0)(tslib@2.7.0)(typescript@5.6.3)
+      '@types/murmurhash-js':
+        specifier: ^1.0.6
+        version: 1.0.6
       husky:
         specifier: ^9.1.6
         version: 9.1.6
@@ -18,7 +31,7 @@ importers:
         specifier: ^15.2.10
         version: 15.2.10
       prettier:
-        specifier: 3.3.3
+        specifier: ^3.3.3
         version: 3.3.3
       rollup:
         specifier: ^4.24.0
@@ -49,6 +62,24 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
+
+  '@rollup/plugin-commonjs@28.0.0':
+    resolution: {integrity: sha512-BJcu+a+Mpq476DMXG+hevgPSl56bkUoi88dKT8t3RyUp8kGuOh+2bU8Gs7zXDlu+fyZggnJ+iOBGrb/O1SorYg==}
+    engines: {node: '>=16.0.0 || 14 >= 14.17'}
+    peerDependencies:
+      rollup: ^2.68.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
+  '@rollup/plugin-node-resolve@15.3.0':
+    resolution: {integrity: sha512-9eO5McEICxMzJpDW9OnMYSv4Sta3hmt7VtBFz5zR9273suNOydOyq/FrGeGy+KsTRFm8w0SLVhzig2ILFT63Ag==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.78.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/plugin-typescript@12.1.0':
     resolution: {integrity: sha512-Kzs8KGJofe7cfTRODsnG1jNGxSvU8gVoNNd7Z/QaY25AYwe2LSSUpx/kPxqF38NYkpR8de3m51r9uwJpDlz6dg==}
@@ -155,6 +186,12 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/murmurhash-js@1.0.6':
+    resolution: {integrity: sha512-P2RRwRpevEKO0FrK5xNjxBywg0Br24tEv8K2+iWg56PtcCUNGAkaaOWKBQiUpofA8H/gmgdHXrcvSgp2uXCVAQ==}
+
+  '@types/resolve@1.20.2':
+    resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+
   ansi-escapes@7.0.0:
     resolution: {integrity: sha512-GdYO7a61mR0fOlAsvC9/rIHf7L96sBc6dEWzeOu+KAea5bZyQRPIpojrVoI4AXGJS/ycu/fBTdLrUkA4ODrvjw==}
     engines: {node: '>=18'}
@@ -204,6 +241,9 @@ packages:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
     engines: {node: '>=18'}
 
+  commondir@1.0.1:
+    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
+
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -216,6 +256,10 @@ packages:
     peerDependenciesMeta:
       supports-color:
         optional: true
+
+  deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
 
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
@@ -237,6 +281,14 @@ packages:
   execa@8.0.1:
     resolution: {integrity: sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==}
     engines: {node: '>=16.17'}
+
+  fdir@6.4.0:
+    resolution: {integrity: sha512-3oB133prH1o4j/L5lLW7uOCF1PlD+/It2L0eL/iAqWMB91RBbqTewABqxhj0ibBd90EEmWZq7ntIWzVaWcXTGQ==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
@@ -287,9 +339,15 @@ packages:
     resolution: {integrity: sha512-OVa3u9kkBbw7b8Xw5F9P+D/T9X+Z4+JruYVNapTjPYZYUznQ5YfWeFkOj606XYYW8yugTfC8Pj0hYqvi4ryAhA==}
     engines: {node: '>=18'}
 
+  is-module@1.0.0:
+    resolution: {integrity: sha512-51ypPSPCoTEIN9dy5Oy+h4pShgJmPCygKfyRCISBI+JoWT/2oJvK8QPxmwv7b/p239jXrm9M1mlQbyKJ5A152g==}
+
   is-number@7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
+
+  is-reference@1.2.1:
+    resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
 
   is-stream@3.0.0:
     resolution: {integrity: sha512-LnQR4bZ9IADDRSkvpqMGvt/tEJWclzklNgSw48V5EAaAeDd6qGvN8ei6k5p0tvxSR171VmGyHuTiAOfxAbr8kA==}
@@ -338,6 +396,9 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  murmurhash-js@1.0.0:
+    resolution: {integrity: sha512-TvmkNhkv8yct0SVBSy+o8wYzXjE4Zz3PCesbfs8HiCXXdcTuocApFv11UWlNFWKYsP2okqrhb7JNlSm9InBhIw==}
 
   npm-run-path@5.3.0:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
@@ -493,6 +554,28 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
+  '@rollup/plugin-commonjs@28.0.0(rollup@4.24.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
+      commondir: 1.0.1
+      estree-walker: 2.0.2
+      fdir: 6.4.0(picomatch@2.3.1)
+      is-reference: 1.2.1
+      magic-string: 0.30.11
+      picomatch: 2.3.1
+    optionalDependencies:
+      rollup: 4.24.0
+
+  '@rollup/plugin-node-resolve@15.3.0(rollup@4.24.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
+      '@types/resolve': 1.20.2
+      deepmerge: 4.3.1
+      is-module: 1.0.0
+      resolve: 1.22.8
+    optionalDependencies:
+      rollup: 4.24.0
+
   '@rollup/plugin-typescript@12.1.0(rollup@4.24.0)(tslib@2.7.0)(typescript@5.6.3)':
     dependencies:
       '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
@@ -560,6 +643,10 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/murmurhash-js@1.0.6': {}
+
+  '@types/resolve@1.20.2': {}
+
   ansi-escapes@7.0.0:
     dependencies:
       environment: 1.1.0
@@ -607,6 +694,8 @@ snapshots:
 
   commander@12.1.0: {}
 
+  commondir@1.0.1: {}
+
   cross-spawn@7.0.3:
     dependencies:
       path-key: 3.1.1
@@ -616,6 +705,8 @@ snapshots:
   debug@4.3.7:
     dependencies:
       ms: 2.1.3
+
+  deepmerge@4.3.1: {}
 
   emoji-regex@10.4.0: {}
 
@@ -639,6 +730,10 @@ snapshots:
       onetime: 6.0.0
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
+
+  fdir@6.4.0(picomatch@2.3.1):
+    optionalDependencies:
+      picomatch: 2.3.1
 
   fill-range@7.1.1:
     dependencies:
@@ -674,7 +769,13 @@ snapshots:
     dependencies:
       get-east-asian-width: 1.2.0
 
+  is-module@1.0.0: {}
+
   is-number@7.0.0: {}
+
+  is-reference@1.2.1:
+    dependencies:
+      '@types/estree': 1.0.6
 
   is-stream@3.0.0: {}
 
@@ -733,6 +834,8 @@ snapshots:
   mimic-function@5.0.1: {}
 
   ms@2.1.3: {}
+
+  murmurhash-js@1.0.0: {}
 
   npm-run-path@5.3.0:
     dependencies:

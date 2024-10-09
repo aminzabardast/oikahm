@@ -1,5 +1,7 @@
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 const config = [
   {
@@ -8,7 +10,7 @@ const config = [
       file: "dist/index.cjs",
       format: "cjs",
     },
-    plugins: [typescript()],
+    plugins: [typescript(), nodeResolve(), commonjs()],
   },
   {
     input: "src/index.ts",
@@ -16,7 +18,7 @@ const config = [
       file: "dist/index.mjs",
       format: "es",
     },
-    plugins: [typescript()],
+    plugins: [typescript(), nodeResolve(), commonjs()],
   },
   {
     // path to your declaration files root
