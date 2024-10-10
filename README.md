@@ -22,10 +22,11 @@ pnpm add oikahm
 ```
 
 ```js
-import { OIKAHM as HashMap } from "oikahm";
+import { default as HashMap } from "oikahm";
 const hashMap = new HashMap();
 hashMap.set("A Key", 123);
 console.log(hashMap.get("A Key")); // $ > 123
+console.log(hashMap.get("Another Key")); // $ > undefined
 ```
 
 ## Contributing

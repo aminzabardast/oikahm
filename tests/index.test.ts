@@ -56,5 +56,6 @@ describe("README Examples;", () => {
     const hashMap = new OIKAHM();
     hashMap.set("A Key", 123);
     expect(hashMap.get("A Key")).toBe(123);
+    expect(hashMap.get("Another Key")).toBeUndefined();
   });
 });
