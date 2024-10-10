@@ -1,4 +1,4 @@
-import OIKAHM, { type OIKAHMKey, type HashAlgorithm } from "../src/index";
+import OIKAHM, { type OIKAHMKey } from "../src/index";
 
 describe("Generally, OIKAHM", () => {
   it("should return `undefined` for any key by default.", () => {
@@ -50,4 +50,11 @@ describe("OIKAHM with `object` key", () => {
 });
 describe("OIKAHM with both `array` and - a similar - `object` keys", () => {
   it.todo("should be Order-Invariant and Key-Agnostic (and not mix them up).");
+});
+describe("README Examples;", () => {
+  it("Example 1 should succeed.", () => {
+    const hashMap = new OIKAHM();
+    hashMap.set("A Key", 123);
+    expect(hashMap.get("A Key")).toBe(123);
+  });
 });
