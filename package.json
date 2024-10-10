@@ -1,6 +1,6 @@
 {
   "name": "oikahm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Order-Invariant Key-Agnostic Hash Map",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
