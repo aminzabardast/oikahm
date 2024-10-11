@@ -2,6 +2,7 @@
 export default {
   testEnvironment: "node",
   transform: {
+    "^.+.ts?$": ["ts-jest", {}],
     "^.+.tsx?$": ["ts-jest", {}],
   },
   moduleNameMapper: {
