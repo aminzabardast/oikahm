@@ -20,18 +20,27 @@ importers:
       lodash.isarray:
         specifier: ^4.0.0
         version: 4.0.0
+      lodash.isobject:
+        specifier: ^3.0.2
+        version: 3.0.2
       lodash.isstring:
         specifier: ^4.0.1
         version: 4.0.1
       lodash.join:
         specifier: ^4.0.1
         version: 4.0.1
+      lodash.keys:
+        specifier: ^4.2.0
+        version: 4.2.0
       lodash.map:
         specifier: ^4.6.0
         version: 4.6.0
       lodash.sortby:
         specifier: ^4.7.0
         version: 4.7.0
+      lodash.values:
+        specifier: ^4.3.0
+        version: 4.3.0
       murmurhash-js:
         specifier: ^1.0.0
         version: 1.0.0
@@ -50,7 +59,7 @@ importers:
         version: 0.4.4(rollup@4.24.0)
       '@rollup/plugin-typescript':
         specifier: ^12.1.0
-        version: 12.1.0(rollup@4.24.0)(tslib@2.7.0)(typescript@5.6.3)
+        version: 12.1.0(rollup@4.24.0)(tslib@2.8.0)(typescript@5.6.3)
       '@types/crypto-js':
         specifier: ^4.2.2
         version: 4.2.2
@@ -69,18 +78,27 @@ importers:
       '@types/lodash.isarray':
         specifier: ^4.0.9
         version: 4.0.9
+      '@types/lodash.isobject':
+        specifier: ^3.0.9
+        version: 3.0.9
       '@types/lodash.isstring':
         specifier: ^4.0.9
         version: 4.0.9
       '@types/lodash.join':
         specifier: ^4.0.9
         version: 4.0.9
+      '@types/lodash.keys':
+        specifier: ^4.2.9
+        version: 4.2.9
       '@types/lodash.map':
         specifier: ^4.6.13
         version: 4.6.13
       '@types/lodash.sortby':
         specifier: ^4.7.9
         version: 4.7.9
+      '@types/lodash.values':
+        specifier: ^4.3.9
+        version: 4.3.9
       '@types/murmurhash-js':
         specifier: ^1.0.6
         version: 1.0.6
@@ -109,8 +127,8 @@ importers:
         specifier: ^29.2.5
         version: 29.2.5(@babel/core@7.25.8)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.25.8))(jest@29.7.0(@types/node@22.7.5))(typescript@5.6.3)
       tslib:
-        specifier: ^2.7.0
-        version: 2.7.0
+        specifier: ^2.8.0
+        version: 2.8.0
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -565,17 +583,26 @@ packages:
   '@types/lodash.isarray@4.0.9':
     resolution: {integrity: sha512-wMrERVQy8QK/Imp1HQwObYyYcff80Xxlqjl+6B3C49Wy9stC1AzGZrljCsHEgAiYfSgSFTPWjcX2Ey68VC8lhA==}
 
+  '@types/lodash.isobject@3.0.9':
+    resolution: {integrity: sha512-eVsQuAMn8SyrD11SIv2P9ke4j+6kGs5JAQsIFhIw7iIiHfIzKWVEL6ZVSmXfJC4naO/GoZKJW+gC2vAtVjCa8Q==}
+
   '@types/lodash.isstring@4.0.9':
     resolution: {integrity: sha512-sjGPpa15VBpMns/4s6Blm567JgxLVVu/eCYCe7h/TdQyPCz9lIhaLSISjN7ZC9cDXmUT2IM/4mNRw8OtYirziw==}
 
   '@types/lodash.join@4.0.9':
     resolution: {integrity: sha512-fjxMVcWucqXOQW/O1jGwp77Q4Rgp47x4BQEg0J2vhIgAjlrHiDOZetVWRaBIDAyTp/6fy3ZjGgsCrzvZifaR1Q==}
 
+  '@types/lodash.keys@4.2.9':
+    resolution: {integrity: sha512-xYfRf5I2/99g2HST1reW1MnS4aLkinWzgO+v/x+nPTgh8vsUuY1R6f4lZ32IZVszdOt3KVN4o9jk+QfTQGXr7A==}
+
   '@types/lodash.map@4.6.13':
     resolution: {integrity: sha512-kppRBzlpuvQQsr7R2nv/DDDZds8fglRFNAK70WUOkOC18KOcuQ22oQF9Kgy5Z2v/eDNkBm0ltrT6FThSkuWwow==}
 
   '@types/lodash.sortby@4.7.9':
     resolution: {integrity: sha512-PDmjHnOlndLS59GofH0pnxIs+n9i4CWeXGErSB5JyNFHu2cmvW6mQOaUKjG8EDPkni14IgF8NsRW8bKvFzTm9A==}
+
+  '@types/lodash.values@4.3.9':
+    resolution: {integrity: sha512-IJ20OEfqNwm3k8ENwoM3q0yOs4UMpgtD4GqxB4lwBHToGthHWqhyh5DdSgQjioocz0QK2SSBkJfCq95ZTV8BTw==}
 
   '@types/lodash@4.17.10':
     resolution: {integrity: sha512-YpS0zzoduEhuOWjAotS6A5AVCva7X4lVlYLF0FYHAY9sdraBfnatttHItlWeZdGhuEkf+OzMNg2ZYAx8t+52uQ==}
@@ -710,8 +737,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  caniuse-lite@1.0.30001667:
-    resolution: {integrity: sha512-7LTwJjcRkzKFmtqGsibMeuXmvFDfZq/nzIjnmgCGzKKRVzjD72selLDK1oPF/Oxzmt4fNcPvTDvGqSDG4tCALw==}
+  caniuse-lite@1.0.30001668:
+    resolution: {integrity: sha512-nWLrdxqCdblixUO+27JtGJJE/txpJlyUy5YN1u53wLZkP0emYCo5zgS6QYft7VUYR42LGgi/S5hdLZTrnyIddw==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -833,8 +860,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.36:
-    resolution: {integrity: sha512-HYTX8tKge/VNp6FGO+f/uVDmUkq+cEfcxYhKf15Akc4M5yxt5YmorwlAitKWjWhWQnKcDRBAQKXkhqqXMqcrjw==}
+  electron-to-chromium@1.5.38:
+    resolution: {integrity: sha512-VbeVexmZ1IFh+5EfrYz1I0HTzHVIlJa112UEWhciPyeOcKJGeTv6N8WnG4wsQB81DGCaVEGhpSb6o6a8WYFXXg==}
 
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -936,8 +963,8 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
-  get-east-asian-width@1.2.0:
-    resolution: {integrity: sha512-2nk+7SIVb14QrgXFHcm84tD4bKQz0RxPuMT8Ag5KPOq7J5fEmAg0UbXdTOSHqNuHSU28k55qnceesxXRZGzKWA==}
+  get-east-asian-width@1.3.0:
+    resolution: {integrity: sha512-vpeMIQKxczTD/0s2CdEWHcb0eeJe6TFjxb+J5xgX7hScxqrGuyjmv4c1D4A/gelKfyox0gJJwIHF+fLjeaM8kQ==}
     engines: {node: '>=18'}
 
   get-package-type@0.1.0:
@@ -1267,11 +1294,17 @@ packages:
     resolution: {integrity: sha512-V8ViWvoNlXpCrB6Ewaj3ScRXUpmCvqp4tJUxa3dlovuJj/8lp3SND5Kw4v5OeuHgoyw4qJN+gl36qZqp6WYQ6g==}
     deprecated: This package is deprecated. Use Array.isArray.
 
+  lodash.isobject@3.0.2:
+    resolution: {integrity: sha512-3/Qptq2vr7WeJbB4KHUSKlq8Pl7ASXi3UG6CMbBm8WRtXi8+GHm7mKaU3urfpSEzWe2wCIChs6/sdocUsTKJiA==}
+
   lodash.isstring@4.0.1:
     resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
 
   lodash.join@4.0.1:
     resolution: {integrity: sha512-4G7nNGEXH7R2nAMRObrJB2HBIsI5tMPa67BNfXu6SDdmP4PfDnuutgB3g2OKNOCdb0TvgmStwq46i4WYTzaRbg==}
+
+  lodash.keys@4.2.0:
+    resolution: {integrity: sha512-J79MkJcp7Df5mizHiVNpjoHXLi4HLjh9VLS/M7lQSGoQ+0oQ+lWEigREkqKyizPB1IawvQLLKY8mzEcm1tkyxQ==}
 
   lodash.map@4.6.0:
     resolution: {integrity: sha512-worNHGKLDetmcEYDvh2stPCrrQRkP20E4l0iIS7F8EvzMqBBi7ltvFN5m1HvTf1P7Jk1txKhvFcmYsCr8O2F1Q==}
@@ -1281,6 +1314,9 @@ packages:
 
   lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
+
+  lodash.values@4.3.0:
+    resolution: {integrity: sha512-r0RwvdCv8id9TUblb/O7rYPwVy6lerCbcawrfdo9iC/1t1wsNMJknO79WNBgwkH0hIeJ08jmvvESbFpNb4jH0Q==}
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -1292,8 +1328,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  magic-string@0.30.11:
-    resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
+  magic-string@0.30.12:
+    resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
   make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
@@ -1658,8 +1694,8 @@ packages:
       esbuild:
         optional: true
 
-  tslib@2.7.0:
-    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+  tslib@2.8.0:
+    resolution: {integrity: sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==}
 
   type-detect@4.0.8:
     resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==}
@@ -2143,7 +2179,7 @@ snapshots:
       estree-walker: 2.0.2
       fdir: 6.4.0(picomatch@2.3.1)
       is-reference: 1.2.1
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       picomatch: 2.3.1
     optionalDependencies:
       rollup: 4.24.0
@@ -2166,14 +2202,14 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  '@rollup/plugin-typescript@12.1.0(rollup@4.24.0)(tslib@2.7.0)(typescript@5.6.3)':
+  '@rollup/plugin-typescript@12.1.0(rollup@4.24.0)(tslib@2.8.0)(typescript@5.6.3)':
     dependencies:
       '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       resolve: 1.22.8
       typescript: 5.6.3
     optionalDependencies:
       rollup: 4.24.0
-      tslib: 2.7.0
+      tslib: 2.8.0
 
   '@rollup/pluginutils@5.1.2(rollup@4.24.0)':
     dependencies:
@@ -2297,6 +2333,10 @@ snapshots:
     dependencies:
       '@types/lodash': 4.17.10
 
+  '@types/lodash.isobject@3.0.9':
+    dependencies:
+      '@types/lodash': 4.17.10
+
   '@types/lodash.isstring@4.0.9':
     dependencies:
       '@types/lodash': 4.17.10
@@ -2305,11 +2345,19 @@ snapshots:
     dependencies:
       '@types/lodash': 4.17.10
 
+  '@types/lodash.keys@4.2.9':
+    dependencies:
+      '@types/lodash': 4.17.10
+
   '@types/lodash.map@4.6.13':
     dependencies:
       '@types/lodash': 4.17.10
 
   '@types/lodash.sortby@4.7.9':
+    dependencies:
+      '@types/lodash': 4.17.10
+
+  '@types/lodash.values@4.3.9':
     dependencies:
       '@types/lodash': 4.17.10
 
@@ -2440,8 +2488,8 @@ snapshots:
 
   browserslist@4.24.0:
     dependencies:
-      caniuse-lite: 1.0.30001667
-      electron-to-chromium: 1.5.36
+      caniuse-lite: 1.0.30001668
+      electron-to-chromium: 1.5.38
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.0)
 
@@ -2461,7 +2509,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
-  caniuse-lite@1.0.30001667: {}
+  caniuse-lite@1.0.30001668: {}
 
   chalk@2.4.2:
     dependencies:
@@ -2564,7 +2612,7 @@ snapshots:
     dependencies:
       jake: 10.9.2
 
-  electron-to-chromium@1.5.36: {}
+  electron-to-chromium@1.5.38: {}
 
   emittery@0.13.1: {}
 
@@ -2658,7 +2706,7 @@ snapshots:
 
   get-caller-file@2.0.5: {}
 
-  get-east-asian-width@1.2.0: {}
+  get-east-asian-width@1.3.0: {}
 
   get-package-type@0.1.0: {}
 
@@ -2721,7 +2769,7 @@ snapshots:
 
   is-fullwidth-code-point@5.0.0:
     dependencies:
-      get-east-asian-width: 1.2.0
+      get-east-asian-width: 1.3.0
 
   is-generator-fn@2.1.0: {}
 
@@ -3150,15 +3198,21 @@ snapshots:
 
   lodash.isarray@4.0.0: {}
 
+  lodash.isobject@3.0.2: {}
+
   lodash.isstring@4.0.1: {}
 
   lodash.join@4.0.1: {}
+
+  lodash.keys@4.2.0: {}
 
   lodash.map@4.6.0: {}
 
   lodash.memoize@4.1.2: {}
 
   lodash.sortby@4.7.0: {}
+
+  lodash.values@4.3.0: {}
 
   lodash@4.17.21: {}
 
@@ -3174,7 +3228,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  magic-string@0.30.11:
+  magic-string@0.30.12:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -3334,7 +3388,7 @@ snapshots:
 
   rollup-plugin-dts@6.1.1(rollup@4.24.0)(typescript@5.6.3):
     dependencies:
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       rollup: 4.24.0
       typescript: 5.6.3
     optionalDependencies:
@@ -3432,7 +3486,7 @@ snapshots:
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.4.0
-      get-east-asian-width: 1.2.0
+      get-east-asian-width: 1.3.0
       strip-ansi: 7.1.0
 
   strip-ansi@6.0.1:
@@ -3505,7 +3559,7 @@ snapshots:
       '@jest/types': 29.6.3
       babel-jest: 29.7.0(@babel/core@7.25.8)
 
-  tslib@2.7.0: {}
+  tslib@2.8.0: {}
 
   type-detect@4.0.8: {}
 
