@@ -7,10 +7,14 @@ import map from "lodash.map";
 import every from "lodash.every";
 import sortBy from "lodash.sortby";
 import join from "lodash.join";
+import isObject from "lodash.isobject";
+import keys from "lodash.keys";
+import values from "lodash.values";
 
 type OIKAHMStringKey = string;
 type OIKAHMArrayKey = string[];
-type OIKAHMKey = OIKAHMStringKey | OIKAHMArrayKey;
+type OIKAHMObjectKey = { [key: OIKAHMStringKey]: OIKAHMStringKey };
+type OIKAHMKey = OIKAHMStringKey | OIKAHMArrayKey | OIKAHMObjectKey;
 type HashMap = { [key: OIKAHMStringKey]: any };
 type HashAlgorithm = "sha256" | "murmur";
 
@@ -30,7 +34,9 @@ class OIKAHM {
   }
   private hashKey(multiKey: OIKAHMKey): string {
     if (this.isArrayKey(multiKey)) {
-      multiKey = this.keyToStringKey(multiKey);
+      multiKey = this.arrayKeyToStringKey(multiKey as OIKAHMArrayKey);
+    } else if (this.isObjectKey(multiKey)) {
+      multiKey = this.objectKeyToStringKey(multiKey as OIKAHMObjectKey);
     }
     if (this._hash_algorithm === "murmur") {
       return murmur3(multiKey as string, this._seed).toString();
@@ -40,11 +46,21 @@ class OIKAHM {
       );
     }
   }
-  private keyToStringKey(key: OIKAHMKey): OIKAHMStringKey {
-    return `string:${join(sortBy(key), "")}`;
+  private arrayKeyToStringKey(key: OIKAHMArrayKey): OIKAHMStringKey {
+    return `array:${join(sortBy(key as OIKAHMArrayKey), "")}`;
+  }
+  private objectKeyToStringKey(key: OIKAHMObjectKey): OIKAHMStringKey {
+    return `object:${join(sortBy(map(key, (objectValue, objectKey) => objectKey + objectValue) as OIKAHMArrayKey), "")}`;
   }
   private isArrayKey(key: OIKAHMKey): boolean {
     return isArray(key) && every(map(key, (key) => isString(key)));
+  }
+  private isObjectKey(key: OIKAHMKey): boolean {
+    return (
+      isObject(key) &&
+      every(map(keys(key), (key) => isString(key))) &&
+      every(map(values(key), (key) => isString(key)))
+    );
   }
 }
 
