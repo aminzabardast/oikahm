@@ -1,5 +1,10 @@
 # Order-Invariant Key-Agnostic Hash Map (OIKAHM)
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/aminzabardast/oikahm/format-test-build.yaml?branch=master)](https://github.com/aminzabardast/oikahm/actions?query=workflow%3ABuild)
+[![Build Size](https://img.shields.io/bundlephobia/minzip/oikahm?label=bundle%20size)](https://bundlephobia.com/result?p=oikahm)
+[![Version](https://img.shields.io/npm/v/oikahm)](https://www.npmjs.com/package/oikahm)
+[![Downloads](https://img.shields.io/npm/dt/oikahm.svg)](https://www.npmjs.com/package/oikahm)
+
 ## Overview
 
 OIKAHM is a JavaScript implementation of a flexible and efficient hash map that supports order-invariant, composite keys. Unlike traditional hash maps that depend on a single key or the order of elements in multi-part keys, OIKAHM allows you to use complex keys, such as arrays or objects, without worrying about their order. This makes it an ideal choice for scenarios where key order should not affect lookups, ensuring consistent and predictable behavior.
