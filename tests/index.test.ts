@@ -9,10 +9,11 @@ describe("Generally, OIKAHM", () => {
   it("should return the correct value assigned for it.", () => {
     const hashMap = new OIKAHM();
     const key: OIKAHMKey = "testKey";
-    hashMap.set(key, 1);
-    hashMap.set(key, 2);
-    expect(hashMap.get(key)).not.toBe(1);
-    expect(hashMap.get(key)).toBe(2);
+    hashMap.set(key, 1423);
+    hashMap.set(key, 2314);
+    expect(hashMap.get(key)).not.toBe(1423);
+    expect(hashMap.get(key)).not.toBe("2314");
+    expect(hashMap.get(key)).toBe(2314);
   });
   it("should accept `string` as a key.", () => {
     const hashMap = new OIKAHM();
@@ -25,13 +26,33 @@ describe("Generally, OIKAHM", () => {
     const key1: OIKAHMKey = ["A", "B"];
     hashMap.set(key1, 1);
     expect(hashMap.get(key1)).toBe(1);
-    const key5: OIKAHMKey = ["B", "C", "A", "D"];
-    expect(hashMap.get(key5)).toBeUndefined();
+    const key2: OIKAHMKey = ["B", "C", "A", "D"];
+    expect(hashMap.get(key2)).toBeUndefined();
   });
-  it.todo("should accept `object` as a key.");
-  it.todo(
-    "should be Key-Agnostic (accepting `string`, `int`, `array`, and `object` in the same hash mapping).",
-  );
+  it("should accept `object` as a key.", () => {
+    const hashMap = new OIKAHM();
+    const key: OIKAHMKey = {
+      attr1: "A",
+      attr2: "B",
+    };
+    hashMap.set(key, 1);
+    expect(hashMap.get(key)).toBe(1);
+  });
+  it("should be Key-Agnostic (accepting `string`, `int`, `array`, and `object` in the same hash mapping).", () => {
+    const hashMap = new OIKAHM();
+    const keyO: OIKAHMKey = {
+      attr1: "A",
+      attr2: "B",
+    };
+    const keyA: OIKAHMKey = ["A", "B"];
+    const keyS: OIKAHMKey = "AB";
+    hashMap.set(keyO, 1);
+    hashMap.set(keyA, 2);
+    hashMap.set(keyS, 3);
+    expect(hashMap.get(keyO)).toBe(1);
+    expect(hashMap.get(keyA)).toBe(2);
+    expect(hashMap.get(keyS)).toBe(3);
+  });
   it("should work with `murmur` and `sha256` hashes.", () => {
     const key: OIKAHMKey = "testKey";
 
@@ -79,10 +100,53 @@ describe("OIKAHM with `array` key", () => {
   });
 });
 describe("OIKAHM with `object` key", () => {
-  it.todo("should be Order-Invariant.");
+  it("should be Order-Invariant.", () => {
+    const hashMap = new OIKAHM();
+    const key1: OIKAHMKey = {
+      attr1: "A",
+      attr2: "B",
+    };
+    const key2: OIKAHMKey = {
+      attr2: "B",
+      attr1: "A",
+    };
+    hashMap.set(key1, 1);
+    hashMap.set(key2, 2);
+    expect(hashMap.get(key1)).toBe(2);
+    expect(hashMap.get(key2)).toBe(2);
+  });
 });
 describe("OIKAHM with both `array` and - a similar - `object` keys", () => {
-  it.todo("should be Order-Invariant and Key-Agnostic (and not mix them up).");
+  it("should be Order-Invariant and Key-Agnostic (and not mix them up).", () => {
+    const hashMap = new OIKAHM();
+
+    const keyO1: OIKAHMKey = {
+      attr1: "A",
+      attr2: "B",
+    };
+    const keyO2: OIKAHMKey = {
+      attr2: "B",
+      attr1: "A",
+    };
+    const keyA1: OIKAHMKey = ["A", "B"];
+    const keyA2: OIKAHMKey = ["B", "A"];
+    const keyS1: OIKAHMKey = "AB";
+    const keyS2: OIKAHMKey = "BA";
+
+    hashMap.set(keyO1, 1);
+    hashMap.set(keyO2, 2);
+    hashMap.set(keyA1, 3);
+    hashMap.set(keyA2, 4);
+    hashMap.set(keyS1, 5);
+    hashMap.set(keyS2, 6);
+
+    expect(hashMap.get(keyO1)).toBe(2);
+    expect(hashMap.get(keyO2)).toBe(2);
+    expect(hashMap.get(keyA1)).toBe(4);
+    expect(hashMap.get(keyA2)).toBe(4);
+    expect(hashMap.get(keyS1)).toBe(5);
+    expect(hashMap.get(keyS2)).toBe(6);
+  });
 });
 describe("README Examples;", () => {
   it("Example 1 should succeed.", () => {
