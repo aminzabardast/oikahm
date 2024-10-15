@@ -24,6 +24,7 @@ pnpm add oikahm
 ```js
 import { default as HashMap } from "oikahm";
 const hashMap = new HashMap();
+// String Key
 hashMap.set("A Key", 2314);
 console.log(hashMap.get("A Key")); // $ > 2314
 console.log(hashMap.get("Another Key")); // $ > undefined
@@ -32,11 +33,23 @@ console.log(hashMap.get("Another Key")); // $ > undefined
 ```js
 import { default as HashMap } from "oikahm";
 const hashMap = new HashMap();
+// Array Key
 hashMap.set(["Key 1", "Key 2"], 2314);
 // Order-Invariant Access
 console.log(hashMap.get(["Key 1", "Key 2"])); // $ > 2314
 console.log(hashMap.get(["Key 2", "Key 1"])); // $ > 2314
 console.log(hashMap.get(["Key 1", "Key 2", "Key 3"])); // $ > undefined
+```
+
+```js
+import { default as HashMap } from "oikahm";
+const hashMap = new HashMap();
+// Object Key
+hashMap.set({ key1: "val1", key2: "val2" }, 2314);
+// Order-Invariant Access
+console.log(hashMap.get({ key1: "val1", key2: "val2" })); // $ > 2314
+console.log(hashMap.get({ key2: "val2", key1: "val1" })); // $ > 2314
+console.log(hashMap.get({ key1: "val1", key2: "val2", key3: "val3" })); // $ > undefined
 ```
 
 ## Contributing

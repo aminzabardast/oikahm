@@ -162,4 +162,13 @@ describe("README Examples;", () => {
     expect(hashMap.get(["Key 2", "Key 1"])).toBe(2314);
     expect(hashMap.get(["Key 1", "Key 2", "Key 3"])).toBeUndefined();
   });
+  it("Example 3 should succeed.", () => {
+    const hashMap = new OIKAHM();
+    hashMap.set({ key1: "val1", key2: "val2" }, 2314);
+    expect(hashMap.get({ key1: "val1", key2: "val2" })).toBe(2314);
+    expect(hashMap.get({ key2: "val2", key1: "val1" })).toBe(2314);
+    expect(
+      hashMap.get({ key1: "val1", key2: "val2", key3: "val3" }),
+    ).toBeUndefined();
+  });
 });
