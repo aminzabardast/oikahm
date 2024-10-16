@@ -18,7 +18,7 @@ OIKAHM is a JavaScript implementation of a flexible and efficient hash map that 
 
 ## Installation
 
-Install OIKAHM using NPM or PNPM:
+Install OIKAHM using NPM, PNPM, or your favorite package manager:
 
 ```shell
 npm add oikahm
