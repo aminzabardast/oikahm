@@ -85,5 +85,5 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@latest"
 }
