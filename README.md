@@ -1,6 +1,6 @@
 # Order-Invariant Key-Agnostic Hash Map (OIKAHM)
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/aminzabardast/oikahm/format-test-build.yaml?branch=master)](https://github.com/aminzabardast/oikahm/actions?query=workflow%3ABuild)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/aminzabardast/oikahm/edge-checks.yaml?branch=master)](https://github.com/aminzabardast/oikahm/actions?query=workflow%3ABuild)
 [![Build Size](https://img.shields.io/bundlephobia/minzip/oikahm?label=bundle%20size)](https://bundlephobia.com/result?p=oikahm)
 [![Version](https://img.shields.io/npm/v/oikahm)](https://www.npmjs.com/package/oikahm)
 [![Downloads](https://img.shields.io/npm/dt/oikahm.svg)](https://www.npmjs.com/package/oikahm)
