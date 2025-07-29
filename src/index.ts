@@ -47,7 +47,7 @@ class OIKAHM {
    * @param {OIKAHMKey} key - The key that receives the value.
    * @param {any} value The value we want to set for the key.
    */
-  set(key: OIKAHMKey, value: any) {
+  set(key: OIKAHMKey, value: any): void {
     this._hash_map[this.hashedKey(key)] = value;
   }
   /**
@@ -55,7 +55,7 @@ class OIKAHM {
    * @param {OIKAHMKey} key - The reference key.
    * @returns {void}
    */
-  get(key: OIKAHMKey): void {
+  get(key: OIKAHMKey): any {
     return this._hash_map[this.hashedKey(key)];
   }
   /**
